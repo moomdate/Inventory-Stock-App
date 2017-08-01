@@ -1,0 +1,16 @@
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\bin\Debug\CompletePro.exe.config
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\bin\Debug\dataBase.mdb
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\bin\Debug\CompletePro.exe
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\bin\Debug\CompletePro.pdb
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.Form1.resources
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.Properties.Resources.resources
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.csproj.GenerateResource.Cache
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.exe
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.pdb
+c:\users\snailbot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.csprojResolveAssemblyReference.cache
+C:\Users\SnailBot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.Form3.resources
+C:\Users\SnailBot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.Form4.resources
+C:\Users\SnailBot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.csproj.ResolveComReference.cache
+C:\Users\SnailBot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.login.resources
+C:\Users\SnailBot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.userSetting.resources
+C:\Users\SnailBot\documents\visual studio 2015\Projects\CompletePro\CompletePro\obj\Debug\CompletePro.Inventory.resources
