@@ -33,7 +33,7 @@ namespace CompletePro
 
         private void IdNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+           // e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -76,7 +76,7 @@ namespace CompletePro
                         //   cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = " + Form1.Idnumber;
 
                         cmd.CommandText = "insert into Product ([IdNumber],[Name],[Amount],[Location]) values (@IdNumber,@Name,@Amount,@Location)";
-                        cmd.Parameters.AddWithValue("@IdNumber", int.Parse(IdNumber.Text));
+                        cmd.Parameters.AddWithValue("@IdNumber", IdNumber.Text);
                         cmd.Parameters.AddWithValue("@Name", NameData.Text);
                         cmd.Parameters.AddWithValue("@Amount", int.Parse(Amount.Text));
                         cmd.Parameters.AddWithValue("@Location", Location.Text);
@@ -102,6 +102,11 @@ namespace CompletePro
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void IdNumber_TextChanged(object sender, EventArgs e)
         {
 
         }

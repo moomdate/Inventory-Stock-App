@@ -32,7 +32,7 @@ namespace CompletePro
                     cmd.Connection = connection;
                     //   cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = " + Form1.Idnumber;
 
-                    cmd.CommandText = "select * from Product where IdNumber = " + Form1.IdnumberFromGrid;
+                    cmd.CommandText = "select * from Product where IdNumber = '" + Form1.IdnumberFromGrid + "'";
                     if (connection.State != ConnectionState.Open)
                         connection.Open();
 
@@ -82,7 +82,7 @@ namespace CompletePro
                     connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database/dataBase.mdb";
                     cmd.Connection = connection;
                     // cmd.CommandText = "update Product set IdNumber = " + IdNumber.Text + ",Name = " + NameData.Text + ",Amount = " + Amount.Text + ",Location = " + Location.Text + " where IdNumber = " + Form1.IdnumberFromGrid;
-                    cmd.CommandText = "UPDATE Product SET IdNumber = @id, Name = @name, Amount = @amount, Location = @location WHERE IdNumber = " + Form1.IdnumberFromGrid;
+                    cmd.CommandText = "UPDATE Product SET IdNumber = @id, Name = @name, Amount = @amount, Location = @location WHERE IdNumber ='" + Form1.IdnumberFromGrid +"'";
 
                     cmd.Parameters.AddWithValue("@id", IdNumber.Text);
                     cmd.Parameters.AddWithValue("@name", NameData.Text);

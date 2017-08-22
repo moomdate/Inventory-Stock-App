@@ -61,6 +61,7 @@
             this.IdNumber.Name = "IdNumber";
             this.IdNumber.Size = new System.Drawing.Size(174, 24);
             this.IdNumber.TabIndex = 0;
+            this.IdNumber.TextChanged += new System.EventHandler(this.IdNumber_TextChanged);
             this.IdNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdNumber_KeyPress);
             // 
             // label2

@@ -116,7 +116,7 @@ namespace CompletePro
                             connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database/dataBase.mdb";
                             cmd.Connection = connection;
                             // connection.Open();
-                            cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = " + IdNumberSearch.Text;
+                            cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = '" + IdNumberSearch.Text+ "'";
                             if (connection.State != ConnectionState.Open)
                                 connection.Open();
                             dr = cmd.ExecuteReader();
@@ -124,6 +124,9 @@ namespace CompletePro
                             if (dr.HasRows)
                             {
                                 Idnumber = IdNumberSearch.Text;
+                                connection.Close();
+                                connection.Dispose();
+                                dr.Close();
                                 Inventory from2 = new Inventory();
                                 from2.ShowDialog();
 
@@ -243,7 +246,7 @@ namespace CompletePro
                             cmd.Connection = connection;
                             //   cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = " + Form1.Idnumber;
 
-                            cmd.CommandText = "delete from Product where IdNumber = 0" + firstCellValue;
+                            cmd.CommandText = "delete from Product where IdNumber = '" + firstCellValue + "'";
                             if (connection.State != ConnectionState.Open)
                                 connection.Open();
 
@@ -306,7 +309,7 @@ namespace CompletePro
                     {
                         connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database/dataBase.mdb";
                         cmd.Connection = connection;
-                        cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = " + IdSearch.Text;
+                        cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = '" + IdSearch.Text + "'";
                         // cmd.Parameters.AddWithValue("@IdNumber", IdNumberSearch.Text);
                         //cmd.Connection = connection;
                         if (connection.State != ConnectionState.Open)

@@ -45,8 +45,8 @@ namespace CompletePro
                 {
 
                     connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database/dataBase.mdb";
-                    cmd.Connection = connection;
-                    cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = " + Form1.Idnumber;
+                    cmd.Connection = connection;//+ Form1.Idnumber
+                    cmd.CommandText = "SELECT * FROM Product WHERE IdNumber = '" + Form1.Idnumber +"'";
                     if (connection.State != ConnectionState.Open)
                         connection.Open();
                     dr = cmd.ExecuteReader();
@@ -66,7 +66,7 @@ namespace CompletePro
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Eror");
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -81,7 +81,7 @@ namespace CompletePro
                     connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database/dataBase.mdb";
                     cmd.Connection = connection;
                     //(int)increaseA.Value;
-                    cmd.CommandText = "update Product set Amount = " + ((defualtAmount + (int)increaseA.Value) - (int)decreaseA.Value) + " where IdNumber = " + Form1.Idnumber;
+                    cmd.CommandText = "update Product set Amount = " + ((defualtAmount + (int)increaseA.Value) - (int)decreaseA.Value) + " WHERE IdNumber = '" + Form1.Idnumber +"'";
                     if (connection.State != ConnectionState.Open)
                         connection.Open();
                     cmd.ExecuteNonQuery();
@@ -90,7 +90,7 @@ namespace CompletePro
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Eror");
+                    MessageBox.Show("Error");
                 }
             }
 
